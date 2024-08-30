@@ -1,0 +1,20 @@
+tenha o node instalado com npm
+
+instale o vite:
+npm install vite
+
+criar uma aplicação com o vite:
+npm create vite@latest
+
+selecione as opções:
+
+1. Informe o nome do projeto
+ex: petrolytics
+
+2. Selecione o framework
+ex: React
+
+3. Selecione a tecnologia
+ex: Typescript
+
+Pronto!
