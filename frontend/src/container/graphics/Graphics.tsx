@@ -1,5 +1,7 @@
 const Graphics: React.FC = () => {
-    return <></>;
+    return <>
+    
+    </>;
 };
 
 export default Graphics;
