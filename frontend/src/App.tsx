@@ -1,15 +1,16 @@
-import { useState } from 'react'
+import Button from './components/Button';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyles from './styles/GlobalStyles';
+import { theme } from './styles/theme';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <h1>Bem vindo!</h1>
-      </div>
-    </>
-  )
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Button $primary>Primary</Button>
+      <Button>Secondary</Button>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
