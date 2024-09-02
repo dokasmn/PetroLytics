@@ -1,4 +1,4 @@
-import Button from './components/Button';
+import Button from './components/items/Button';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/GlobalStyles';
 import { theme } from './styles/theme';

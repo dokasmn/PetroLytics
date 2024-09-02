@@ -18,3 +18,5 @@ ex: React
 ex: Typescript
 
 Pronto!
+
+!!! para uma aplicação já criada (com o package e o package-lock) é somente necessário rodar o comando npm install !!!
