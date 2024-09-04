@@ -1,1 +1,1 @@
-import Map from "../../components/oilmap/map"
+// import Map from "../../components/oilmap/map"
