@@ -16,8 +16,8 @@ export const StyledLanguageOption = styled.div`
 export const ToggleOption = styled.h4<{ $active: boolean }>`
     margin: 0;
     font-size: 14px;
-    color: ${props => (props.$active ? 'green' : '#000')};
-    transition: color 1s ease;
+    color: ${props => (props.$active ? 'green' : '#fff')};
+    transition: color 0.5s ease;
     width: 40px;
     text-align: center;
     z-index: 10;
