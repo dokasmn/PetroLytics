@@ -45,3 +45,20 @@ class Dates(models.Model):
         abstract = True
 
 
+class Well(models.Model):
+    name = models.CharField()
+    reclassification = models.CharField()
+    situation = models.CharField()
+    operator = models.CharField()
+    
+    localization = models.JSONField()
+    type_of_well = models.JSONField()
+    map_datas = models.JSONField()
+    dates = models.JSONField()
+
+    class Meta:
+        verbose_name = 'Well'
+        verbose_name_plural = 'Wells '
+
+    def __str__(self):
+        return self.name
