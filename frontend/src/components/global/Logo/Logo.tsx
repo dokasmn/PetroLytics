@@ -9,7 +9,7 @@ const Logo: React.FC = () => {
     return <>
         <StyledLogo>
             <img src={logo} alt="Enterprise Logo" />
-            <StyledLogoText color='#fff'>PETROBRÁS</StyledLogoText>
+            <StyledLogoText color='#fff'>PETROBRAS</StyledLogoText>
         </StyledLogo>
     </>
 };

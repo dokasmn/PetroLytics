@@ -2,13 +2,9 @@ import styled from 'styled-components';
 
 export const StyledHeroBackground = styled.div`
     height: 100vh;
-    width: 100%;
     position: relative;
     top: 0;
     z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
 `;
 
