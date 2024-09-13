@@ -19,7 +19,7 @@ export const StyledNavbarPageOption = styled.button<{ page: boolean }>`
     border: none;
     transition: color 1s ease;
     padding: 0.5rem 2rem;
-    border-radius: 30px;
+    border-radius: 40px;
     color: ${props => (props.page ? '#fff' : '#A0A0A0')};
     font-weight: 500;
     cursor: pointer;

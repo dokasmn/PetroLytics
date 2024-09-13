@@ -3,14 +3,14 @@ import styled from 'styled-components';
 export const StyledTitle = styled.h3`
     position: relative;
     left: 10rem;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #525252;
     margin: 1rem;
 `
 
 export const StyledTitleUnderline = styled.div`
     padding: 0.2rem;
-    width: 15rem;
+    width: 10rem;
     background-color: #FDC82F;
     position: relative;
     left: 10rem;

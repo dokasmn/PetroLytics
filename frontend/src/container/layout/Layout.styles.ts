@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
 export const StyledLayout = styled.div`
-    overflow-x: hidden;
+    overflow: hidden;
 `

@@ -17,9 +17,9 @@ function App() {
       <GlobalStyles />
         <Router>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/graphics" element={<Graphics />} />
-                <Route path="/oilmap" element={<OilMap />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/graphics" element={<Graphics />} />
+              <Route path="/oilmap" element={<OilMap />} />
             </Routes>
         </Router>
     </ThemeProvider>

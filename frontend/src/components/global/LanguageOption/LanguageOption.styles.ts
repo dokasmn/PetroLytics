@@ -10,7 +10,7 @@ export const StyledLanguageOption = styled.div`
     padding: 5px;
     position: relative;
     cursor: pointer;
-    margin-right: 1rem;
+    margin-right: 2rem;
 `;
 
 export const ToggleOption = styled.h4<{ $active: boolean }>`

@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
         { name: 'DASHBOARD', path: '/graphics' },
         { name: 'OILMAP', path: '/oilmap' }
     ];
-
+    
     const location = useLocation();
 
     return (
