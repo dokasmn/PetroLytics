@@ -10,15 +10,8 @@ class LocalizationSerializer(serializers.Serializer):
 
 
 class TypeOfWellSerializer(serializers.Serializer):
-    OPTIONS = [
-        ('land', 'Land'),
-        ('sea', 'Sea')
-    ]
-
     category = serializers.CharField(max_length=60)
-    land_sea = serializers.CharField(
-        choices=OPTIONS
-    )
+    land_sea = serializers.CharField(max_length=1)
 
 
 class MapSerializer(serializers.Serializer):
@@ -29,15 +22,15 @@ class MapSerializer(serializers.Serializer):
 
 
 class DatesSerializer(serializers.Serializer):
-    start = serializers.DateField(max_length=11)
-    finish = serializers.DateField(max_length=11)
-    conclusion = serializers.DateField(max_length=11)
+    start = serializers.DateField(format="%d/%m/%Y")
+    finish = serializers.DateField(format="%d/%m/%Y")
+    conclusion = serializers.DateField(format="%d/%m/%Y")
 
 
 class WellSerializer(serializers.ModelSerializer):
     localization = LocalizationSerializer()
     type_of_well = TypeOfWellSerializer()
-    map_datas_serializer = MapSerializer()
+    map_datas = MapSerializer()
     dates = DatesSerializer()
 
     class Meta:
@@ -46,6 +39,23 @@ class WellSerializer(serializers.ModelSerializer):
             'name', 
             'reclassification',
             'situation',
-            'operator'
-
+            'operator',
+            'localization',
+            'type_of_well',
+            'map_datas',
+            'dates'
         ]
+
+    def create(self, valited_data):
+        localization_data = valited_data.pop('localization')
+        type_of_well_data = valited_data.pop('type_of_well')
+        map_datas_data = valited_data.pop('map_datas')
+        dates_data = valited_data.pop('dates')
+
+        Well.objects.create(
+            **valited_data, 
+            localization=localization_data, 
+            type_of_well=type_of_well_data,
+            map_datas=map_datas_data,
+            dates=dates_data 
+            )

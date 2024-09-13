@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import Well
+from .serializers import WellSerializer
 
-# Create your views here.
+
+class WellViewSets(viewsets.ModelViewSet):
+    queryset = Well.objects.all()
+    serializer_class = WellSerializer
