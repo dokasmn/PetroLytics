@@ -11,7 +11,7 @@ class LocalizationSerializer(serializers.Serializer):
 
 class TypeOfWellSerializer(serializers.Serializer):
     category = serializers.CharField(max_length=60)
-    land_sea = serializers.CharField()
+    land_sea = serializers.CharField(max_length=1)
 
 
 class MapSerializer(serializers.Serializer):
@@ -22,15 +22,15 @@ class MapSerializer(serializers.Serializer):
 
 
 class DatesSerializer(serializers.Serializer):
-    start = serializers.DateField()
-    finish = serializers.DateField()
-    conclusion = serializers.DateField()
+    start = serializers.DateField(format="%d/%m/%Y")
+    finish = serializers.DateField(format="%d/%m/%Y")
+    conclusion = serializers.DateField(format="%d/%m/%Y")
 
 
 class WellSerializer(serializers.ModelSerializer):
     localization = LocalizationSerializer()
     type_of_well = TypeOfWellSerializer()
-    map_datas_serializer = MapSerializer()
+    map_datas = MapSerializer()
     dates = DatesSerializer()
 
     class Meta:
@@ -49,7 +49,7 @@ class WellSerializer(serializers.ModelSerializer):
     def create(self, valited_data):
         localization_data = valited_data.pop('localization')
         type_of_well_data = valited_data.pop('type_of_well')
-        map_datas_data = valited_data.pop('map_datas_serializer')
+        map_datas_data = valited_data.pop('map_datas')
         dates_data = valited_data.pop('dates')
 
         Well.objects.create(
