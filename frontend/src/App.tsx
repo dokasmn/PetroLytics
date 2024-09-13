@@ -1,3 +1,5 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // styles
 import { ThemeProvider } from 'styled-components';
@@ -6,12 +8,20 @@ import { theme } from './styles/theme';
 
 // pages
 import Home from './container/home/Home'
+import OilMap from './container/oilmap/Oilmap'
+import Graphics from './container/table/Graphics'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Home></Home>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/graphics" element={<Graphics />} />
+                <Route path="/oilmap" element={<OilMap />} />
+            </Routes>
+        </Router>
     </ThemeProvider>
   );
 }

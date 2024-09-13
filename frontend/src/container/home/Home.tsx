@@ -1,23 +1,17 @@
+// layout
+import Layout from '../layout/Layout'
 
 // components
-import Header from "../../components/global/Header";
-import Hero from "../../components/global/Hero";
+import PageTitle from '../../components/global/PageTitle';
+import About from '../../components/home/About';
 
-// assets
-import heroImage from "../../assets/imgs/hero_image.svg"
 
 const Home: React.FC = () => {
     return <>
-        <Header></Header>
-        <Hero
-            imageSrc={heroImage}
-            altText="Descrição da imagem"
-            description="
-                Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-                Pellentesque efficitur porttitor porta.
-                Proin bibendum ac libero et semper."
-        ></Hero>
+        <Layout>
+            <PageTitle>ABOUT THIS WEBSITE</PageTitle>
+            <About />
+        </Layout>
     </>;
 };
 
