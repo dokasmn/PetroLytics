@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+// src/components/LanguageOption.tsx
+import React from 'react';
+import { useLanguageContext } from '../../../contexts/LanguageContext';
 
 // styles
 import { StyledLanguageOption, ToggleBall, ToggleContainer, ToggleOption } from './LanguageOption.styles';
 
 const LanguageOption: React.FC = () => {
-    const [isEnglish, setIsEnglish] = useState(false);
-
-    const toggleLanguage = () => {
-        setIsEnglish(!isEnglish);
-    };
+    const { language, isEnglish, toggleLanguage } = useLanguageContext();
 
     return (
         <StyledLanguageOption onClick={toggleLanguage}>
@@ -19,6 +17,6 @@ const LanguageOption: React.FC = () => {
             </ToggleContainer>
         </StyledLanguageOption>
     );
-    };
+};
 
-    export default LanguageOption;
+export default LanguageOption;

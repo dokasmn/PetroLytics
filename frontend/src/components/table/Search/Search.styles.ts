@@ -1,18 +1,13 @@
 import styled from 'styled-components';
 
-export const StyledSelectBackground = styled.select`
-    width: 100%;
-    padding: 10px 40px 10px 15px;
+export const StyledSearchBackground = styled.input`
+    padding: 10px 30px 10px 15px;
     font-size: 16px;
     font-family: Arial, sans-serif;
     color: #555;
-    border: 2px solid #c8e6c9;
+    border: 1px solid #c8e6c9;
     border-radius: 30px;
     background-color: #fff;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    position: relative;
 
     &:focus {
         border-color: #038141;
@@ -20,19 +15,20 @@ export const StyledSelectBackground = styled.select`
     }
 `;
 
-export const StylediSelectIconContainer = styled.div`
+export const StyledSearchContainer = styled.div`
     position: relative;
     display: inline-block;
     width: 250px;
     margin-right: 5rem;
 `;
 
-export const ArrowContainer = styled.div`
+export const IconContainer = styled.div`
     width: 35px;
     height: 100%;
     background-color: #038141;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
+    padding: 0 0.2rem;
     position: absolute;
     right: 0;
     top: 0;
@@ -41,16 +37,7 @@ export const ArrowContainer = styled.div`
     justify-content: center;
     pointer-events: none;
 
-    &::before {
-        content: '';
-        width: 0;
-        height: 0;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-top: 6px solid white;
-    }
-
-    ${StyledSelectBackground}:hover & {
+    ${StyledSearchBackground}:hover & {
         background-color: #388e3c;
     }
 `;

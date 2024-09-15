@@ -1,10 +1,16 @@
 import { StyledSelectBackground, StylediSelectIconContainer, ArrowContainer } from './Select.styles';
 
-const Select: React.FC = () => {
+interface SelectProps {
+    options: string[]
+}
+
+const Select: React.FC<SelectProps> = ({ options }) => {
     return (
         <StylediSelectIconContainer>
             <StyledSelectBackground>
-            <option>Select a publication date</option>
+            {options.map((option) => (
+                <option>{option}</option>
+            ))}
             </StyledSelectBackground>
             <ArrowContainer />
         </StylediSelectIconContainer>

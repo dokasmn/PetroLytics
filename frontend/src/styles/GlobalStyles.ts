@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -10,3 +11,8 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 export default GlobalStyles;
+
+export const StyledFilterWrapper = styled.div`
+    width: 100%;
+    padding: 1rem 10rem;
+`
