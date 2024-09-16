@@ -22,9 +22,9 @@ class MapSerializer(serializers.Serializer):
 
 
 class DatesSerializer(serializers.Serializer):
-    start = serializers.CharField(max_length=15)
-    finish = serializers.CharField(max_length=15)
-    conclusion = serializers.CharField(max_length=15)
+    start = serializers.CharField(max_length=30)
+    finish = serializers.CharField(max_length=30)
+    conclusion = serializers.CharField(max_length=30)
 
     # start = serializers.DateField(format="%d-%m-%Y",input_formats=['%Y-%m-%d', '%d-%m-%Y'])
     # finish = serializers.DateField(format="%d-%m-%Y",input_formats=['%Y-%m-%d', '%d-%m-%Y'])
@@ -39,6 +39,7 @@ class WellSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Well
+        # fields = '__all__'
         fields = [
             'name', 
             'reclassification',
@@ -65,3 +66,7 @@ class WellSerializer(serializers.ModelSerializer):
             )
 
         return well_instance
+    
+
+class FileUploadSerializer(serializers.Serializer):
+    file = serializers.FileField()
