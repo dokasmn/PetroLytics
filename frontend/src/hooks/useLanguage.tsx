@@ -12,18 +12,20 @@ const useLanguage = () => {
         i18n.changeLanguage(newLanguage);
         setLanguage(newLanguage);
         setIsEnglish(newLanguage === 'en');
-        localStorage.setItem('language', newLanguage); // Salvar no localStorage
+        localStorage.setItem('language', newLanguage);
     };
 
     useEffect(() => {
+        console.log(i18n);
         const savedLanguage = localStorage.getItem('language');
         if (savedLanguage) {
-        i18n.changeLanguage(savedLanguage);
-        setLanguage(savedLanguage);
-        setIsEnglish(savedLanguage === 'en');
+            i18n.changeLanguage(savedLanguage);
+            setLanguage(savedLanguage);
+            setIsEnglish(savedLanguage === 'en');
         }
     }, [i18n]);
-
+    
+    
     return { language, isEnglish, toggleLanguage };
 };
 
