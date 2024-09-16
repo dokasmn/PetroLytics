@@ -77,10 +77,18 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'petrolytics',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'petrolytics',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'database.db',
     }
 }
 
@@ -131,4 +139,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     'DATETIME_FORMAT': '%Y-%m-%d %H:%M:%S',
 #     'DATE_FORMAT': '%Y-%m-%d',
 #     'TIME_FORMAT': '%H:%M:%S',
+# }
+
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_PARSER_CLASSES': [
+#         'rest_framework.parsers.FileUploadParser',
+#     ]
 # }
