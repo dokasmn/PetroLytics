@@ -1,6 +1,7 @@
-from .views import WellViewSets
+from .views import WellViewSets, SpreadsheetWellViewSets
 from rest_framework.routers import SimpleRouter
 
 
-router = SimpleRouter()
-router.register(r'input_datas', WellViewSets)
+spreadsheet_router = SimpleRouter()
+spreadsheet_router.register(r'input_datas', WellViewSets)
+spreadsheet_router.register(r'input_dataset', SpreadsheetWellViewSets, basename="upload-spreadsheet")

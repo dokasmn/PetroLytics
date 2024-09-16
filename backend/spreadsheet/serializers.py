@@ -56,10 +56,12 @@ class WellSerializer(serializers.ModelSerializer):
         map_datas_data = valited_data.pop('map_datas')
         dates_data = valited_data.pop('dates')
 
-        Well.objects.create(
+        well_instance = Well.objects.create(
             **valited_data, 
             localization=localization_data, 
             type_of_well=type_of_well_data,
             map_datas=map_datas_data,
             dates=dates_data 
             )
+
+        return well_instance
