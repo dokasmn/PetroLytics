@@ -10,12 +10,18 @@ import Select from '../../components/global/Select'
 import Search from '../../components/table/Search'
 import Table from '../../components/table/Table';
 
-const options = ['Select publication date']
+// hooks
+import { useTranslation } from 'react-i18next';
+
 
 const Oilmap: React.FC = () => {
+
+    const options = ['Select publication date']
+    const { t } = useTranslation();
+    
     return <>
         <Layout>
-            <PageTitle>SEE INFORMATION ABOUT OIL WELLS</PageTitle>
+            <PageTitle>{t('dashboard.title')}</PageTitle>
             <StyledFilterWrapper>
                 <Search></Search>
                 <Select options={options}></Select>

@@ -1,7 +1,15 @@
 {
     "home": {
-        "title": "SOBRE ESTE SITE",
-        "about": "Este é um site sobre..."
+        "title": "SOBRE ESTE SITE"
+    },
+    "dashboard": {
+        "title": "POÇOS DE PETRÓLEO",
+        "table": {
+            "oilWell": "Poços",
+            "start": "Data de Início",
+            "finish": "Data de Finalização",
+            "conclusion": "Data de Conclusão"
+        }
     }
 }
 

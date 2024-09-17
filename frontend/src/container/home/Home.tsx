@@ -1,6 +1,5 @@
 // hooks
 import { useTranslation } from 'react-i18next';
-
 // layout
 import Layout from '../layout/Layout';
 
