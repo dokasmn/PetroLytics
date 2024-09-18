@@ -6,7 +6,7 @@ import { StyledFilterWrapper } from '../../styles/GlobalStyles';
 
 // components
 import PageTitle from '../../components/global/PageTitle';
-import Select  from '../../components/global/Select';
+import Select  from '../../components/oilmap/Select';
 
 const options = ['All oil wells']
 

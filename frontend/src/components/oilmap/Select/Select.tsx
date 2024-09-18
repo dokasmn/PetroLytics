@@ -7,7 +7,7 @@ interface SelectProps {
 const Select: React.FC<SelectProps> = ({ options }) => {
     return (
         <StylediSelectIconContainer>
-            <StyledSelectBackground>
+            <StyledSelectBackground aria-label="Choose an option">
             {options.map((option) => (
                 <option>{option}</option>
             ))}

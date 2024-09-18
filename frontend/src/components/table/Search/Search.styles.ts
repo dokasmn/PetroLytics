@@ -8,6 +8,7 @@ export const StyledSearchBackground = styled.input`
     border: 1px solid #c8e6c9;
     border-radius: 30px;
     background-color: #fff;
+    width: 400px;
 
     &:focus {
         border-color: #038141;
@@ -18,7 +19,7 @@ export const StyledSearchBackground = styled.input`
 export const StyledSearchContainer = styled.div`
     position: relative;
     display: inline-block;
-    width: 250px;
+    width: 450px;
     margin-right: 5rem;
 `;
 

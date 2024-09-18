@@ -1,5 +1,5 @@
 // styles
-import { StyledTable, StyledTd, StyledTh, StyledTableWrapper } from './Table.styles';
+import { StyledTable, StyledTd, StyledTh, StyledTableWrapper, StyledTableRow } from './Table.styles';
 
 const Table: React.FC = () => {
     return (
@@ -15,12 +15,12 @@ const Table: React.FC = () => {
                 </thead>
                 <tbody>
                     {[...Array(8)].map((_, i) => (
-                        <tr key={i}>
+                        <StyledTableRow key={i}>
                             <StyledTd>1-AA-1-RN</StyledTd>
                             <StyledTd>21/01/1984</StyledTd>
                             <StyledTd>29/01/1984</StyledTd>
                             <StyledTd>29/01/1984</StyledTd>
-                        </tr>
+                        </StyledTableRow>
                     ))}
                 </tbody>
             </StyledTable>

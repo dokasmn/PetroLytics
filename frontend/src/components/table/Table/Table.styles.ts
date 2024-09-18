@@ -4,7 +4,7 @@ export const StyledTableWrapper = styled.div`
     width: 100%;
     max-width: 1000px;
     overflow-x: auto;
-    margin: 2rem 10rem;
+    margin: 4.5rem 10rem;
 `;
 
 export const StyledTable = styled.table`
@@ -36,9 +36,11 @@ export const StyledTd = styled.td`
     &:nth-child(even) {
         background-color: #ffffff;
     }
+`;
 
-    &:hover{
-        border: 1px solid #038141;
+export const StyledTableRow = styled.tr`
+    &:hover {
+        outline: 1px solid #038141;
         color: #038141;
     }
 `;
