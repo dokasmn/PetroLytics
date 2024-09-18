@@ -85,6 +85,14 @@ DATABASES = {
 }
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'database.db',
+#     }
+# }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -131,4 +139,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     'DATETIME_FORMAT': '%Y-%m-%d %H:%M:%S',
 #     'DATE_FORMAT': '%Y-%m-%d',
 #     'TIME_FORMAT': '%H:%M:%S',
+# }
+
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_PARSER_CLASSES': [
+#         'rest_framework.parsers.FileUploadParser',
+#     ]
 # }

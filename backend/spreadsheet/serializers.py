@@ -22,9 +22,13 @@ class MapSerializer(serializers.Serializer):
 
 
 class DatesSerializer(serializers.Serializer):
-    start = serializers.DateField(format="%d/%m/%Y")
-    finish = serializers.DateField(format="%d/%m/%Y")
-    conclusion = serializers.DateField(format="%d/%m/%Y")
+    start = serializers.CharField(max_length=30)
+    finish = serializers.CharField(max_length=30)
+    conclusion = serializers.CharField(max_length=30)
+
+    # start = serializers.DateField(format="%d-%m-%Y",input_formats=['%Y-%m-%d', '%d-%m-%Y'])
+    # finish = serializers.DateField(format="%d-%m-%Y",input_formats=['%Y-%m-%d', '%d-%m-%Y'])
+    # conclusion = serializers.DateField(format="%d-%m-%Y",input_formats=['%Y-%m-%d', '%d-%m-%Y'])
 
 
 class WellSerializer(serializers.ModelSerializer):
@@ -35,6 +39,7 @@ class WellSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Well
+        # fields = '__all__'
         fields = [
             'name', 
             'reclassification',
@@ -52,10 +57,16 @@ class WellSerializer(serializers.ModelSerializer):
         map_datas_data = valited_data.pop('map_datas')
         dates_data = valited_data.pop('dates')
 
-        Well.objects.create(
+        well_instance = Well.objects.create(
             **valited_data, 
             localization=localization_data, 
             type_of_well=type_of_well_data,
             map_datas=map_datas_data,
             dates=dates_data 
             )
+
+        return well_instance
+    
+
+class FileUploadSerializer(serializers.Serializer):
+    file = serializers.FileField()

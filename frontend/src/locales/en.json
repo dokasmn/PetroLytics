@@ -1,6 +1,14 @@
 {
     "home": {
-        "title": "ABOUT THIS WEBSITE",
-        "about": "This is a website about..."
+        "title": "ABOUT THIS WEBSITE"
+    },
+    "dashboard": {
+        "title": "SEE INFORMATION ABOUT OIL WELLS",
+        "table": {
+            "oilWell": "Oil Well",
+            "start": "Start",
+            "finish": "Finish",
+            "conclusion": "Conclusion"
+        }
     }
 }

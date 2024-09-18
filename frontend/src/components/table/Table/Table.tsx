@@ -1,16 +1,22 @@
 // styles
 import { StyledTable, StyledTd, StyledTh, StyledTableWrapper, StyledTableRow } from './Table.styles';
 
+// hooks
+import { useTranslation } from 'react-i18next';
+
 const Table: React.FC = () => {
+
+    const { t } = useTranslation()
+
     return (
         <StyledTableWrapper>
             <StyledTable>
                 <thead>
                     <tr>
-                        <StyledTh>OIL WELL</StyledTh>
-                        <StyledTh>START</StyledTh>
-                        <StyledTh>FINISH</StyledTh>
-                        <StyledTh>CONCLUSION</StyledTh>
+                        <StyledTh>{t('dashboard.table.oilWell')}</StyledTh>
+                        <StyledTh>{t('dashboard.table.start')}</StyledTh>
+                        <StyledTh>{t('dashboard.table.finish')}</StyledTh>
+                        <StyledTh>{t('dashboard.table.conclusion')}</StyledTh>
                     </tr>
                 </thead>
                 <tbody>
