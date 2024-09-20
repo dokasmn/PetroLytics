@@ -10,13 +10,10 @@ import PageTitle from '../../components/global/PageTitle';
 import Search from '../../components/table/Search'
 import Table from '../../components/table/Table';
 
-<<<<<<< HEAD
 // const options = ['Select publication date']
-=======
 // hooks
 import { useTranslation } from 'react-i18next';
 
->>>>>>> 7b2f84ffa671d1164e289af6a65e4e644972570d
 
 const Oilmap: React.FC = () => {
 

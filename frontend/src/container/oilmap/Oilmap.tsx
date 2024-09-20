@@ -7,6 +7,7 @@ import { StyledFilterWrapper } from '../../styles/GlobalStyles';
 // components
 import PageTitle from '../../components/global/PageTitle';
 import Select  from '../../components/oilmap/Select';
+import Map from '../../components/oilmap/Map/Map';
 
 const options = ['All oil wells']
 
@@ -17,6 +18,7 @@ const Oilmap: React.FC = () => {
             <StyledFilterWrapper>
                 <Select options={options}></Select>
             </StyledFilterWrapper>
+            <Map></Map>
         </Layout>
     </>;
 };
